@@ -4,16 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.yirendai.oss</groupId>
+        <groupId>com.yirendai.infra</groupId>
         <artifactId>oss-common-dependencies-spring-boot-1.4.x</artifactId>
         <version>1.0.8.OSS-SNAPSHOT</version>
     </parent>
     <artifactId>oss-common-dependencies-spring-boot-1.4.1.RELEASE</artifactId>
     <name>oss-common-dependencies-spring-boot-1.4.1.RELEASE</name>
     <packaging>pom</packaging>
-    <url>
-        https://github.com/Yirendai/oss-common-dependencies/tree/master/oss-common-dependencies-spring-boot-1.4.x/oss-common-dependencies-spring-boot-1.4.1.RELEASE
-    </url>
 
     <properties>
         <!-- org.springframework.boot:spring-boot-dependencies -->

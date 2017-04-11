@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.yirendai.oss</groupId>
+        <groupId>com.yirendai.infra</groupId>
         <artifactId>oss-build</artifactId>
         <version>1.0.8.OSS-SNAPSHOT</version>
     </parent>
     <artifactId>oss-common-dependencies</artifactId>
     <name>oss-common-dependencies</name>
     <packaging>pom</packaging>
-    <url>https://github.com/Yirendai/oss-common-dependencies/tree/master</url>
+    <url>https://github.com/home1-oss/oss-common-dependencies</url>
     
     <modules>
 	    <module>oss-common-dependencies-spring-boot-1.4.x</module>
