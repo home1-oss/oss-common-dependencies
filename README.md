@@ -9,14 +9,14 @@ oss-common-dependencies就是为了解决依赖管理的难题, 为oss及其用�
 你的项目应该使用oss-release, oss-release包括oss-common-dependencies和oss-lib.  
 oss-lib项目使用oss-common-dependencies来定义依赖.  
 
-[oss-lib](http://gitlab.internal/infra/oss-lib)提供易于使用的库, 直接使用oss-common-dependencies进行依赖管理.  
-[oss-release](http://gitlab.internal/infra/oss-release)整合oss-common-dependencies和oss-lib.  
+[oss-lib](http://github.com/home1-oss/oss-lib)提供易于使用的库, 直接使用oss-common-dependencies进行依赖管理.  
+[oss-release](http://github.com/home1-oss/oss-release)整合oss-common-dependencies和oss-lib.  
 
 
 你的项目可以使用oss-release作为parent, 这样间接地以oss-build为ancestor.
 
     <parent>
-        <groupId>com.yirendai.oss</groupId>
+        <groupId>com.yirendai.infra</groupId>
         <artifactId>oss-release-spring-boot-${spring-boot.version}</artifactId>
         <version>${oss-release.version}</version>
     </parent>
@@ -25,14 +25,14 @@ oss-lib项目使用oss-common-dependencies来定义依赖.
 
     <!-- 以oss-build为parent是可选的 -->
     <parent>
-        <groupId>com.yirendai.oss</groupId>
+        <groupId>com.yirendai.infra</groupId>
         <artifactId>oss-build</artifactId>
         <version>${oss-build.version}</version>
     </parent>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.yirendai.oss</groupId>
+                <groupId>com.yirendai.infra</groupId>
                 <artifactId>oss-release-spring-boot-${spring-boot.version}</artifactId>
                 <version>${oss-release.version}</version>
                 <type>pom</type>
