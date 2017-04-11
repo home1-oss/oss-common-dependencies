@@ -12,7 +12,6 @@
     <artifactId>oss-common-dependencies-spring-boot-1.4.x</artifactId>
     <name>oss-common-dependencies-spring-boot-1.4.x</name>
     <packaging>pom</packaging>
-    <url>https://github.com/Yirendai/oss-common-dependencies/tree/master/oss-common-dependencies-spring-boot-1.4.x</url>
 
     <modules>
         <module>oss-common-dependencies-spring-boot-1.4.1.RELEASE</module>
