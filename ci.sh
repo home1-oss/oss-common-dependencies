@@ -13,7 +13,6 @@ if [ -z "${GIT_REPO_OWNER}" ]; then
     fi
 fi
 ### OSS CI CONTEXT VARIABLES END
-
 export BUILD_PUBLISH_DEPLOY_SEGREGATION="true"
 export BUILD_SITE="true"
 export BUILD_SITE_PATH_PREFIX="oss"
