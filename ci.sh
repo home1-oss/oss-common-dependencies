@@ -28,7 +28,7 @@ echo "eval \$(curl -s -L ${GIT_SERVICE}/${GIT_REPO_OWNER}/oss-build/raw/${BUILD_
 eval "$(curl -s -L ${GIT_SERVICE}/${GIT_REPO_OWNER}/oss-build/raw/${BUILD_SCRIPT_REF}/src/main/ci-script/ci.sh)"
 ### OSS CI CALL REMOTE CI SCRIPT END
 
-if [ "${GIT_REPO_OWNER}" != "home1-oss" ] && [ "${1}" != "test_and_build" ] && [ "pull_request" != "${TRAVIS_EVENT_TYPE}" ]; then
+if [ "${1}" != "test_and_build" ] && ([ "${GIT_REPO_OWNER}" != "home1-oss" ] || [ "pull_request" == "${TRAVIS_EVENT_TYPE}" ]); then
     echo "skip deploy/publish on forked repo or which trigger by pull request "
 else
     $@
