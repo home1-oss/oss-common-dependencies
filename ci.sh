@@ -9,7 +9,7 @@ if [ -z "${GIT_REPO_OWNER}" ]; then
     if [ -n "${TRAVIS_REPO_SLUG}" ]; then
         GIT_REPO_OWNER=$(echo ${TRAVIS_REPO_SLUG} | awk -F/ '{print $1}');
     else
-        if [ -z "${INTERNAL_GIT_SERVICE_USER}" ]; then GIT_REPO_OWNER="infra"; else GIT_REPO_OWNER="${INTERNAL_GIT_SERVICE_USER}"; fi
+        if [ -z "${INTERNAL_GIT_SERVICE_USER}" ]; then GIT_REPO_OWNER="home1-oss"; else GIT_REPO_OWNER="${INTERNAL_GIT_SERVICE_USER}"; fi
     fi
 fi
 ### OSS CI CONTEXT VARIABLES END
