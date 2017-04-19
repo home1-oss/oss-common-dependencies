@@ -13,10 +13,11 @@ if [ -z "${GIT_REPO_OWNER}" ]; then
     fi
 fi
 ### OSS CI CONTEXT VARIABLES END
-
 export BUILD_PUBLISH_DEPLOY_SEGREGATION="true"
 export BUILD_SITE="true"
 export BUILD_SITE_PATH_PREFIX="oss"
+export BUILD_SITE_GITHUB_REPOSITORY_OWNER="home1-oss"
+export BUILD_SITE_GITHUB_REPOSITORY_NAME="home1-oss"
 export BUILD_TEST_FAILURE_IGNORE="false"
 export BUILD_TEST_SKIP="false"
 
@@ -27,8 +28,8 @@ echo "eval \$(curl -s -L ${GIT_SERVICE}/${GIT_REPO_OWNER}/oss-build/raw/${BUILD_
 eval "$(curl -s -L ${GIT_SERVICE}/${GIT_REPO_OWNER}/oss-build/raw/${BUILD_SCRIPT_REF}/src/main/ci-script/ci.sh)"
 ### OSS CI CALL REMOTE CI SCRIPT END
 
-if [ "${GIT_REPO_OWNER}" != "home1-oss" ] && [ "${1}" != "test_and_build" ]; then
-    echo "skip deploy/publish on forked repo"
+if [ "${1}" != "test_and_build" ] && ([ "${GIT_REPO_OWNER}" != "home1-oss" ] || [ "pull_request" == "${TRAVIS_EVENT_TYPE}" ]); then
+    echo "skip deploy/publish on forked repo or which trigger by pull request "
 else
     $@
 fi
