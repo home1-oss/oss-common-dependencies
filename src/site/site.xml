@@ -25,7 +25,8 @@
     </custom>
 
     <body>
-        <menu ref="parent" />
+        <!-- do not ref to parent, can not find parent's site_en.xml on maven central's staging repository -->
+        <!--menu ref="parent" /-->
         <menu name="DOCUMENTATION">
             <item href="README.html" name="README" />
         </menu>
