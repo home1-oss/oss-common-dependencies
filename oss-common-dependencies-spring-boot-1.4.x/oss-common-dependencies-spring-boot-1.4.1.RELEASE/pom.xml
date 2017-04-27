@@ -4,11 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.yirendai.infra</groupId>
+        <groupId>cn.home1</groupId>
         <artifactId>oss-common-dependencies-spring-boot-1.4.x</artifactId>
         <version>1.0.8.OSS-SNAPSHOT</version>
     </parent>
+
     <artifactId>oss-common-dependencies-spring-boot-1.4.1.RELEASE</artifactId>
+    <description>Common dependencies used in different open source stack module implementations based on spring-boot-1.4.1</description>
     <name>oss-common-dependencies-spring-boot-1.4.1.RELEASE</name>
     <packaging>pom</packaging>
 

@@ -4,11 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.yirendai.infra</groupId>
+        <groupId>cn.home1</groupId>
         <artifactId>oss-common-dependencies-spring-boot-1.4.x</artifactId>
         <version>1.0.8.OSS-SNAPSHOT</version>
     </parent>
+
     <artifactId>oss-common-dependencies-spring-boot-1.4.2.RELEASE</artifactId>
+    <description>Common dependencies used in different open source stack module implementations based on spring-boot-1.4.2</description>
     <name>oss-common-dependencies-spring-boot-1.4.2.RELEASE</name>
     <packaging>pom</packaging>
 
@@ -20,7 +22,7 @@
         <spring-io-platform.version>Athens-SR1</spring-io-platform.version>
         <!-- org.springframework.cloud:spring-cloud-starter-parent -->
         <!--spring-cloud.version>Camden.SR3</spring-cloud.version-->
-        <spring-cloud.version>Dalston.BUILD-SNAPSHOT</spring-cloud.version>
+        <spring-cloud.version>Dalston.RELEASE</spring-cloud.version>
 
         <usertype.version>5.0.0.GA</usertype.version>
 

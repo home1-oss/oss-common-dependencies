@@ -23,6 +23,7 @@ _site/
 .factorypath
 .profiler
 git.properties
+codesigning.asc
 
 **/src/site/markdown/README.md
 **/src/site/markdown/src/readme
