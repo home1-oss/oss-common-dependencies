@@ -16,7 +16,32 @@
     <packaging>pom</packaging>
     <url>https://github.com/home1-oss/oss-common-dependencies</url>
     <version>1.0.8.OSS</version>
-    
+
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/home1-oss/oss-common-dependencies</url>
+    </ciManagement>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/home1-oss/oss-common-dependencies/issues</url>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/home1-oss/oss-common-dependencies</url>
+        <connection>scm:git:https://github.com/home1-oss/oss-common-dependencies.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/home1-oss/oss-common-dependencies.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
     <modules>
 	    <module>oss-common-dependencies-spring-boot-1.4.x</module>
         <!--module>oss-common-dependencies-spring-boot-1.5.x</module-->
