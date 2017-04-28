@@ -29,8 +29,8 @@ env:
 # if refer some release version please modify this var to oss-build version that has bean released, ex: v1.0.9.OSS
 # OSS_BUILD_CONFIG_REF_BRANCH refer to oss-github repo version
 
-  - OSS_BUILD_REF_BRANCH=v1.0.9.OSS
-  - OSS_BUILD_CONFIG_REF_BRANCH=master
+  - OSS_BUILD_REF_BRANCH=develop
+  - OSS_BUILD_CONFIG_REF_BRANCH=develop
   - CI_BUILD_REF_NAME=$TRAVIS_BRANCH
   - GIT_SERVICE=https://github.com
   - INFRASTRUCTURE=github
