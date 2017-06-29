@@ -3,6 +3,7 @@
 if [ -f codesigning.asc.enc ] && [ "${TRAVIS_PULL_REQUEST}" == 'false' ]; then
     openssl aes-256-cbc -K $encrypted_933694a02486_key -iv $encrypted_933694a02486_iv -in codesigning.asc.enc -out codesigning.asc -d
     gpg --fast-import codesigning.asc
+    if [ -n "${GPG_KEYID}" ]; then gpg --keyring secring.gpg --export-secret-key ${GPG_KEYID} > secring.gpg; fi
 fi
 
 export BUILD_SITE_PATH_PREFIX="oss"

@@ -2,11 +2,18 @@ before_script:
 - export BUILD_SITE=true
 #- export LIB_CI_SCRIPT=https://github.com/home1-oss/oss-build/raw/develop/src/main/ci-script/lib_ci.sh
 - export LIB_CI_SCRIPT=http://gitlab.local:10080/home1-oss/oss-build/raw/develop/src/main/ci-script/lib_ci.sh
-- export ORIGIN_REPO_SLUG=home1-oss/oss-build
+- export ORIGIN_REPO_SLUG=home1-oss/oss-common-dependencies
 
 stages:
+- analysis
 - test_and_build
 - deploy
+
+sonar:
+  stage: analysis
+  script:
+  - echo "on_analysis"
+  - bash ci.sh analysis
 
 on_every_push:
   artifacts:
@@ -26,6 +33,9 @@ on_develop_push:
   stage: deploy
 
 on_master_push:
+#  artifacts:
+#    paths:
+#    - "**/target/pom.xml"
   dependencies:
   - on_every_push
   only:
@@ -39,6 +49,6 @@ on_release_tag:
   - on_every_push
   only:
   - /^release.+$/
+  stage: deploy
   script:
   - bash ci.sh publish_release_tag
-  stage: deploy

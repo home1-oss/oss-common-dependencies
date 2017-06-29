@@ -21,6 +21,7 @@ branches:
 cache:
   directories:
   - "$HOME/.cache"
+  - "$HOME/.gradle"
   - "$HOME/.m2"
   - "$HOME/.sonar/cache"
 
@@ -30,7 +31,7 @@ env:
   - BUILD_SITE=true
   - INFRASTRUCTURE=github
   - LIB_CI_SCRIPT=https://github.com/home1-oss/oss-build/raw/develop/src/main/ci-script/lib_ci.sh
-  - ORIGIN_REPO_SLUG=home1-oss/oss-build
+  - ORIGIN_REPO_SLUG=home1-oss/oss-common-dependencies
   - MAVEN_SKIP_RC=true
 group: edge
 install: true
