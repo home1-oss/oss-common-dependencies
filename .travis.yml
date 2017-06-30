@@ -30,7 +30,7 @@ env:
   global:
   - BUILD_SITE=true
   - INFRASTRUCTURE=github
-  - LIB_CI_SCRIPT=https://github.com/home1-oss/oss-build/raw/develop/src/main/ci-script/lib_ci.sh
+  - LIB_CI_SCRIPT=https://github.com/home1-oss/oss-build/raw/master/src/main/ci-script/lib_ci.sh
   - ORIGIN_REPO_SLUG=home1-oss/oss-common-dependencies
   - MAVEN_SKIP_RC=true
 group: edge
