@@ -7,7 +7,7 @@
     <parent>
         <groupId>cn.home1</groupId>
         <artifactId>oss-common-dependencies</artifactId>
-        <version>1.0.9.OSS</version>
+        <version>1.0.10.OSS</version>
     </parent>
 
     <artifactId>oss-common-dependencies-spring-boot-1.4.x</artifactId>
