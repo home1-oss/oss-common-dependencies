@@ -6,7 +6,7 @@
     <parent>
         <groupId>cn.home1</groupId>
         <artifactId>oss-common-dependencies-spring-boot-1.5.x</artifactId>
-        <version>1.0.12.OSS</version>
+        <version>1.0.13.OSS-SNAPSHOT</version>
     </parent>
 
     <artifactId>oss-common-dependencies-spring-boot-1.5.6.RELEASE</artifactId>
