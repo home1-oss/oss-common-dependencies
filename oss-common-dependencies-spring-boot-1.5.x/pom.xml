@@ -10,54 +10,63 @@
         <version>1.0.12.OSS</version>
     </parent>
 
-    <artifactId>oss-common-dependencies-spring-boot-1.4.x</artifactId>
-    <description>Common dependencies used in different open source stack module implementations based on spring-boot-1.4.x</description>
-    <name>oss-common-dependencies-spring-boot-1.4.x</name>
+    <artifactId>oss-common-dependencies-spring-boot-1.5.x</artifactId>
+    <description>Common dependencies used in different open source stack module implementations based on spring-boot-1.5.x</description>
+    <name>oss-common-dependencies-spring-boot-1.5.x</name>
     <packaging>pom</packaging>
 
     <modules>
-        <module>oss-common-dependencies-spring-boot-1.4.1.RELEASE</module>
-        <module>oss-common-dependencies-spring-boot-1.4.2.RELEASE</module>
+        <module>oss-common-dependencies-spring-boot-1.5.4.RELEASE</module>
+        <module>oss-common-dependencies-spring-boot-1.5.6.RELEASE</module>
     </modules>
 
     <properties>
         <!-- org.springframework.boot:spring-boot-dependencies -->
-        <commons-lang3.version>3.4</commons-lang3.version>
-        <jetty.version>9.3.11.v20160721</jetty.version>
-        <log4j2.version>2.6.2</log4j2.version>
+        <commons-lang3.version>3.5</commons-lang3.version>
+        <jetty.version>9.4.5.v20170502</jetty.version>
+        <log4j2.version>2.9.0</log4j2.version>
         <!-- io.spring.platform:platform-bom -->
-        <bouncycastle.version>1.54</bouncycastle.version>
-        <jackson.version>2.8.3</jackson.version>
+        <bouncycastle.version>1.56</bouncycastle.version>
+        <jackson.version>2.8.9</jackson.version>
         <jackson1.version>1.9.13</jackson1.version>
         <lombok.version>1.16.10</lombok.version>
         <!-- org.springframework.cloud:spring-cloud-starter-parent -->
-        <!-- -->
-        <disruptor.version>3.3.4</disruptor.version>
-        <jetty-npn.version>8.1.2.v20120308</jetty-npn.version>
 
-        <gson-jodatime-serialisers.version>1.4.0</gson-jodatime-serialisers.version>
 
-        <!-- conflict: org.eclipse.jetty:jetty-annotations & com.netflix.governator:governator & com.jayway.jsonpath:json-path -->
-        <asm.version>5.0.1</asm.version>
+        <!-- third party -->
+        <auto-value.version>1.5</auto-value.version>
+        <beetl.version>2.2.7</beetl.version>
+        <disruptor.version>3.3.6</disruptor.version>
+        <fastjson.version>1.2.38</fastjson.version>
+        <freebuilder.version>1.14.4</freebuilder.version>
+        <gson-jodatime-serialisers.version>1.6.0</gson-jodatime-serialisers.version>
+        <hikaricp.version>2.4.6</hikaricp.version>
+        <jjwt.version>0.7.0</jjwt.version>
+
+
+        <!-- conflicts -->
+        <!-- conflict: org.eclipse.jetty:jetty-annotations & com.netflix.governator:governator -->
+        <asm.version>5.1</asm.version>
         <!-- conflict: hibernate-validator & io.springfox:springfox-swagger2 -->
-        <classmate.version>1.1.0</classmate.version>
+        <classmate.version>1.3.3</classmate.version>
+        <guava.version>20.0</guava.version>
         <!-- conflict: spring-io-platform & orika-core -->
-        <javassist.version>3.20.0-GA</javassist.version>
+        <javassist.version>3.21.0-GA</javassist.version>
 
         <commons-collections4.version>4.1</commons-collections4.version>
         <!-- note:  commons-beanutils, commons-collections, commons-digester version -->
-        <commons-validator.version>1.5.1</commons-validator.version>
+        <commons-validator.version>1.6</commons-validator.version>
         <!-- note: org.javassist:javassist version -->
-        <orika.version>1.4.2</orika.version>
+        <orika.version>1.5.1</orika.version>
         <!-- note: cglib version -->
-        <p6spy.version>2.3.1</p6spy.version>
+        <p6spy.version>3.2.0</p6spy.version>
         <!-- note: classmate version -->
-        <springfox-swagger.version>2.6.0</springfox-swagger.version>
-        <swagger.version>1.5.10</swagger.version>
+        <springfox-swagger.version>2.7.0</springfox-swagger.version>
+        <swagger.version>1.5.13</swagger.version>
         <!-- note: hibernate version -->
-        <usertype.version>5.0.0.GA</usertype.version>
+        <usertype.version>6.0.1.GA</usertype.version>
         <!-- note: org.apache.kafka:kafka_2.11 com.101tec:zkclient version -->
-        <zookeeper.version>3.4.6</zookeeper.version>
+        <zookeeper.version>3.4.10</zookeeper.version>
     </properties>
 
     <profiles>
@@ -70,12 +79,12 @@
             </activation>
             <properties>
                 <!-- org.springframework.boot:spring-boot-dependencies -->
-                <spring-boot.version>1.4.1.RELEASE</spring-boot.version>
-                <spring-data-releasetrain.version>Hopper-SR3</spring-data-releasetrain.version>
+                <spring-boot.version>1.5.4.RELEASE</spring-boot.version>
+                <spring-data-releasetrain.version>Ingalls-SR4</spring-data-releasetrain.version>
                 <!-- io.spring.platform:platform-bom -->
-                <spring-io-platform.version>Athens-RELEASE</spring-io-platform.version>
+                <spring-io-platform.version>Brussels-SR3</spring-io-platform.version>
                 <!-- org.springframework.cloud:spring-cloud-starter-parent -->
-                <spring-cloud.version>Brixton.SR6</spring-cloud.version>
+                <spring-cloud.version>Dalston.SR3</spring-cloud.version>
             </properties>
             <dependencyManagement>
                 <dependencies>
@@ -145,17 +154,17 @@
                     <dependency><groupId>org.projectlombok</groupId><artifactId>lombok</artifactId><version>${lombok.version}</version></dependency>
 
                     <!-- @formatter:off -->
-                    <dependency><groupId>com.alibaba</groupId><artifactId>fastjson</artifactId><version>1.2.5</version></dependency>
+                    <dependency><groupId>com.alibaba</groupId><artifactId>fastjson</artifactId><version>${fastjson.version}</version></dependency>
                     <dependency><groupId>com.fasterxml</groupId><artifactId>classmate</artifactId><version>${classmate.version}</version></dependency>
                     <dependency><groupId>com.fasterxml.jackson.module</groupId><artifactId>jackson-module-jaxb-annotations</artifactId><version>${jackson.version}</version></dependency>
                     <dependency><groupId>com.fatboyindustrial.gson-jodatime-serialisers</groupId><artifactId>gson-jodatime-serialisers</artifactId><version>${gson-jodatime-serialisers.version}</version></dependency>
                     <!-- see: https://github.com/google/auto/tree/master/value -->
-                    <dependency><groupId>com.google.auto.value</groupId><artifactId>auto-value</artifactId><version>1.2</version></dependency>
-                    <dependency><groupId>com.google.guava</groupId><artifactId>guava</artifactId><version>18.0</version></dependency>
-                    <dependency><groupId>com.ibeetl</groupId><artifactId>beetl</artifactId><version>2.2.7</version></dependency>
+                    <dependency><groupId>com.google.auto.value</groupId><artifactId>auto-value</artifactId><version>${auto-value.version}</version></dependency>
+                    <dependency><groupId>com.google.guava</groupId><artifactId>guava</artifactId><version>${guava.version}</version></dependency>
+                    <dependency><groupId>com.ibeetl</groupId><artifactId>beetl</artifactId><version>${beetl.version}</version></dependency>
                     <dependency><groupId>com.lmax</groupId><artifactId>disruptor</artifactId><version>${disruptor.version}</version></dependency>
-                    <dependency><groupId>com.zaxxer</groupId><artifactId>HikariCP</artifactId><version>2.4.6</version></dependency>
-                    <dependency><groupId>io.jsonwebtoken</groupId><artifactId>jjwt</artifactId><version>0.7.0</version></dependency>
+                    <dependency><groupId>com.zaxxer</groupId><artifactId>HikariCP</artifactId><version>${hikaricp.version}</version></dependency>
+                    <dependency><groupId>io.jsonwebtoken</groupId><artifactId>jjwt</artifactId><version>${jjwt.version}</version></dependency>
                     <dependency><groupId>io.springfox</groupId><artifactId>springfox-bean-validators</artifactId><version>${springfox-swagger.version}</version></dependency>
                     <dependency><groupId>io.springfox</groupId><artifactId>springfox-core</artifactId><version>${springfox-swagger.version}</version></dependency>
                     <dependency><groupId>io.springfox</groupId><artifactId>springfox-data-rest</artifactId><version>${springfox-swagger.version}</version></dependency>
@@ -190,8 +199,6 @@
                     <dependency><groupId>org.eclipse.jetty</groupId><artifactId>jetty-continuation</artifactId><version>${jetty.version}</version></dependency>
                     <dependency><groupId>org.eclipse.jetty</groupId><artifactId>jetty-http</artifactId><version>${jetty.version}</version></dependency>
                     <dependency><groupId>org.eclipse.jetty</groupId><artifactId>jetty-io</artifactId><version>${jetty.version}</version></dependency>
-                    <!-- jetty-jsp not present in jetty-9.3.x -->
-                    <!--dependency><groupId>org.eclipse.jetty</groupId><artifactId>jetty-jsp</artifactId><version>${jetty.version}</version></dependency-->
                     <dependency><groupId>org.eclipse.jetty</groupId><artifactId>jetty-plus</artifactId><version>${jetty.version}</version></dependency>
                     <dependency><groupId>org.eclipse.jetty</groupId><artifactId>jetty-security</artifactId><version>${jetty.version}</version></dependency>
                     <dependency><groupId>org.eclipse.jetty</groupId><artifactId>jetty-server</artifactId><version>${jetty.version}</version></dependency>
@@ -204,24 +211,6 @@
                     <dependency><groupId>org.eclipse.jetty</groupId><artifactId>jetty-nosql</artifactId><version>${jetty.version}</version></dependency>
                     <!-- rewrite http to https -->
                     <dependency><groupId>org.eclipse.jetty</groupId><artifactId>jetty-rewrite</artifactId><version>${jetty.version}</version></dependency>
-                    <!-- SPDY ALPN -->
-                    <dependency><groupId>org.eclipse.jetty</groupId><artifactId>jetty-alpn-server</artifactId><version>${jetty.version}</version></dependency>
-                    <!---
-                    must be on JVM boot classpath
-                    Xbootclasspath/p:../libs/org/mortbay/jetty/alpn/alpn-boot/8.1.6.v20151105/alpn-boot-8.1.6.v20151105.jar
-                    -->
-                    <dependency><groupId>org.mortbay.jetty.alpn</groupId><artifactId>alpn-boot</artifactId><version>8.1.6.v20151105</version></dependency>
-                    <dependency><groupId>org.eclipse.jetty.alpn</groupId><artifactId>alpn-api</artifactId><version>1.1.2.v20150522</version></dependency>
-                    <dependency><groupId>org.jadira.usertype</groupId><artifactId>usertype.core</artifactId><version>${usertype.version}</version></dependency>
-                    <!--
-                    npn: java.lang.NoSuchMethodError: sun.security.ssl.SSLContextImpl.getSuportedCipherSuiteList()Lsun/security/ssl/CipherSuiteList;
-                    must be on JVM boot classpath
-                    -Xbootclasspath/p:../libs/org/mortbay/jetty/npn/npn-boot/8.1.2.v20120308/npn-boot-8.1.2.v20120308.jar
-                    -->
-                    <dependency><groupId>org.mortbay.jetty.npn</groupId><artifactId>npn-boot</artifactId><version>${jetty-npn.version}</version></dependency>
-                    <dependency><groupId>org.eclipse.jetty.npn</groupId><artifactId>npn-api</artifactId><version>${jetty-npn.version}</version></dependency>
-                    <!-- SPDY (before jetty9.3) -->
-                    <!--dependency><groupId>org.eclipse.jetty.spdy</groupId><artifactId>spdy-http-server</artifactId><version>${jetty.version}</version></dependency-->
                     <!-- HTTP2 (after jetty 9.3) -->
                     <dependency><groupId>org.eclipse.jetty.http2</groupId><artifactId>http2-server</artifactId><version>${jetty.version}</version></dependency>
                     <dependency><groupId>org.eclipse.jetty.websocket</groupId><artifactId>javax-websocket-client-impl</artifactId><version>${jetty.version}</version></dependency>
@@ -233,7 +222,7 @@
                     <dependency><groupId>org.eclipse.jetty.websocket</groupId><artifactId>websocket-servlet</artifactId><version>${jetty.version}</version></dependency>
 
                     <!-- see: https://github.com/google/FreeBuilder -->
-                    <dependency><groupId>org.inferred</groupId><artifactId>freebuilder</artifactId><version>1.10.3</version></dependency>
+                    <dependency><groupId>org.inferred</groupId><artifactId>freebuilder</artifactId><version>${freebuilder.version}</version></dependency>
                     <dependency><groupId>org.javassist</groupId><artifactId>javassist</artifactId><version>${javassist.version}</version></dependency>
 
                     <dependency><groupId>org.ow2.asm</groupId><artifactId>asm-commons</artifactId><version>${asm.version}</version></dependency>

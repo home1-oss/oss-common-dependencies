@@ -1,7 +1,9 @@
 
-# oss-common-dependencies-spring-boot-1.4.1.RELEASE
+# oss-common-dependencies-spring-boot-1.4.2.RELEASE
+This pom inherited `oss-common-dependencies-spring-boot-1.4.x`.
 
-当你使用spring-boot-1.4.1.RELEASE时, 应该使用oss-common-dependencies-spring-boot-1.4.1.RELEASE的pom管理你的依赖.  
+You should use `oss-common-dependencies-spring-boot-1.4.2.RELEASE` to manage your dependencies 
+when you are using spring-boot-1.4.2.RELEASE.
 
-本pom继承自oss-common-dependencies-spring-boot-1.4.x, 当oss-common-dependencies-spring-boot-1.4.x定义的依赖版本与spring-boot-1.4.1.RELEASE不兼容时, 
-可以通过`<properties>`或`<dependencyManagement>`覆盖parent的设置.
+Override dependency's version by `<properties>` or `<dependencyManagement>` when 
+there is a conflict between `oss-common-dependencies-spring-boot-1.4.x` and `spring-boot-1.4.2.RELEASE`.

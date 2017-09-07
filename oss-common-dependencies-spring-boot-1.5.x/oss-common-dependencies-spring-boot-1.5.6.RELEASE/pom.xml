@@ -5,28 +5,29 @@
 
     <parent>
         <groupId>cn.home1</groupId>
-        <artifactId>oss-common-dependencies-spring-boot-1.4.x</artifactId>
+        <artifactId>oss-common-dependencies-spring-boot-1.5.x</artifactId>
         <version>1.0.12.OSS</version>
     </parent>
 
-    <artifactId>oss-common-dependencies-spring-boot-1.4.1.RELEASE</artifactId>
-    <description>Common dependencies used in different open source stack module implementations based on spring-boot-1.4.1</description>
-    <name>oss-common-dependencies-spring-boot-1.4.1.RELEASE</name>
+    <artifactId>oss-common-dependencies-spring-boot-1.5.6.RELEASE</artifactId>
+    <description>Common dependencies used in different open source stack module implementations based on spring-boot-1.5.6</description>
+    <name>oss-common-dependencies-spring-boot-1.5.6.RELEASE</name>
     <packaging>pom</packaging>
 
     <properties>
         <!-- org.springframework.boot:spring-boot-dependencies -->
-        <spring-boot.version>1.4.1.RELEASE</spring-boot.version>
-        <spring-data-releasetrain.version>Hopper-SR4</spring-data-releasetrain.version>
+        <jetty.version>9.4.6.v20170531</jetty.version>
+        <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
+        <spring-data-releasetrain.version>Ingalls-SR6</spring-data-releasetrain.version>
         <!-- io.spring.platform:platform-bom -->
-        <spring-io-platform.version>Athens-RELEASE</spring-io-platform.version>
+        <spring-io-platform.version>Brussels-SR4</spring-io-platform.version>
         <!-- org.springframework.cloud:spring-cloud-starter-parent -->
-        <spring-cloud.version>Camden.SR2</spring-cloud.version>
+        <spring-cloud.version>Dalston.SR3</spring-cloud.version>
 
-        <usertype.version>5.0.0.GA</usertype.version>
+        <usertype.version>6.0.1.GA</usertype.version>
 
-        <scala-library.version>2.11.7</scala-library.version>
-        <zkclient.version>0.7</zkclient.version>
+        <scala-library.version>2.11.11</scala-library.version>
+        <zkclient.version>0.10</zkclient.version>
     </properties>
 
     <dependencyManagement>

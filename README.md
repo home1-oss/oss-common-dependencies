@@ -1,19 +1,14 @@
 
-# 技术栈依赖管理
+# oss-common-dependencies
+Common dependencies for home1-oss projects.
 
-定义技术栈的全部软件依赖.  
+Java enterprise software relies on a lot of open source software.
+There are lots of transitive dependency conflicts.
 
-现代软件通常会依赖大量开源软件, 这些开源软件还依赖其它开源软件, 依赖关系比较复杂, 如果使用了错误的依赖可能导致隐蔽的运行时错误.
-oss-common-dependencies就是为了解决依赖管理的难题, 为oss及其用户构建一个稳定的依赖版本基线, 然后在这些依赖的基础上构建可靠的软件.  
+oss-common-dependencies is trying to build a stable dependency baseline for home1-oss modules.
+If you are a user of home1-oss, you should use oss-release, not oss-common-dependencies.
 
-你的项目应该使用oss-release, oss-release包括oss-common-dependencies和oss-lib.  
-oss-lib项目使用oss-common-dependencies来定义依赖.  
-
-[oss-lib](http://github.com/home1-oss/oss-lib)提供易于使用的库, 直接使用oss-common-dependencies进行依赖管理.  
-[oss-release](http://github.com/home1-oss/oss-release)整合oss-common-dependencies和oss-lib.  
-
-
-你的项目可以使用oss-release作为parent, 这样间接地以oss-build为ancestor.
+Your project can use oss-release as parent and implicitly use oss-build as ancestor.
 
     <parent>
         <groupId>cn.home1</groupId>
@@ -21,9 +16,9 @@ oss-lib项目使用oss-common-dependencies来定义依赖.
         <version>${oss-release.version}</version>
     </parent>
 
-或者在dependencyManagement中import它.
+or import in dependencyManagement.
 
-    <!-- 以oss-build为parent是可选的 -->
+    <!-- Use oss-build as parent is optional -->
     <parent>
         <groupId>cn.home1</groupId>
         <artifactId>oss-build</artifactId>

@@ -7,7 +7,7 @@
     <parent>
         <groupId>cn.home1</groupId>
         <artifactId>oss-build</artifactId>
-        <version>1.0.12.OSS</version>
+        <version>1.0.15.OSS</version>
     </parent>
 
     <artifactId>oss-common-dependencies</artifactId>
@@ -15,7 +15,7 @@
     <name>oss-common-dependencies</name>
     <packaging>pom</packaging>
     <url>https://github.com/home1-oss/oss-common-dependencies</url>
-    <version>1.0.11.OSS</version>
+    <version>1.0.12.OSS</version>
 
     <ciManagement>
         <system>Travis CI</system>
@@ -44,7 +44,7 @@
 
     <modules>
 	    <module>oss-common-dependencies-spring-boot-1.4.x</module>
-        <!--module>oss-common-dependencies-spring-boot-1.5.x</module-->
+        <module>oss-common-dependencies-spring-boot-1.5.x</module>
     </modules>
 
     <!--
@@ -123,7 +123,7 @@
                 <dependency>
                     <groupId>org.jboss.xnio</groupId>
                     <artifactId>xnio-api</artifactId>
-                    <version>3.3.6.Final</version>
+                    <version>3.3.8.Final</version>
                 </dependency>
             </dependencies>
         </profile>
