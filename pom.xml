@@ -15,7 +15,7 @@
     <name>oss-common-dependencies</name>
     <packaging>pom</packaging>
     <url>https://github.com/home1-oss/oss-common-dependencies</url>
-    <version>1.0.12.OSS-SNAPSHOT</version>
+    <version>1.0.12.OSS</version>
 
     <ciManagement>
         <system>Travis CI</system>
