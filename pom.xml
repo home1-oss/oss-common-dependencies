@@ -7,7 +7,7 @@
     <parent>
         <groupId>cn.home1</groupId>
         <artifactId>oss-build</artifactId>
-        <version>1.0.12.OSS</version>
+        <version>1.0.15.OSS</version>
     </parent>
 
     <artifactId>oss-common-dependencies</artifactId>
@@ -123,7 +123,7 @@
                 <dependency>
                     <groupId>org.jboss.xnio</groupId>
                     <artifactId>xnio-api</artifactId>
-                    <version>3.3.6.Final</version>
+                    <version>3.3.8.Final</version>
                 </dependency>
             </dependencies>
         </profile>
