@@ -44,7 +44,7 @@
 
     <modules>
 	    <module>oss-common-dependencies-spring-boot-1.4.x</module>
-        <!--module>oss-common-dependencies-spring-boot-1.5.x</module-->
+        <module>oss-common-dependencies-spring-boot-1.5.x</module>
     </modules>
 
     <!--

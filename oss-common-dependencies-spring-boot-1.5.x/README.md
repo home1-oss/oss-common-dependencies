@@ -1,6 +1,6 @@
 
-# oss-common-dependencies-spring-boot-1.4.x
-Define and constraint version of spring family and third party modules, based on spring-boot-1.4.x.
+# oss-common-dependencies-spring-boot-1.5.x
+Define and constraint version of spring family and third party modules, based on spring-boot-1.5.x.
 
 Sub projects may override dependencies defined here.  
 
