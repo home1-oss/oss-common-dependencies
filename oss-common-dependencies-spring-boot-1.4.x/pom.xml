@@ -147,6 +147,11 @@
                     <!-- @formatter:off -->
                     <dependency><groupId>com.alibaba</groupId><artifactId>fastjson</artifactId><version>1.2.5</version></dependency>
                     <dependency><groupId>com.fasterxml</groupId><artifactId>classmate</artifactId><version>${classmate.version}</version></dependency>
+                    <dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-annotations</artifactId><version>${jackson.version}</version></dependency>
+                    <dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-core</artifactId><version>${jackson.version}</version></dependency>
+                    <dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-databind</artifactId><version>${jackson.version}</version></dependency>
+                    <dependency><groupId>com.fasterxml.jackson.dataformat</groupId><artifactId>jackson-dataformat-xml</artifactId><version>${jackson.version}</version></dependency>
+                    <dependency><groupId>com.fasterxml.jackson.datatype</groupId><artifactId>jackson-datatype-joda</artifactId><version>${jackson.version}</version></dependency>
                     <dependency><groupId>com.fasterxml.jackson.module</groupId><artifactId>jackson-module-jaxb-annotations</artifactId><version>${jackson.version}</version></dependency>
                     <dependency><groupId>com.fatboyindustrial.gson-jodatime-serialisers</groupId><artifactId>gson-jodatime-serialisers</artifactId><version>${gson-jodatime-serialisers.version}</version></dependency>
                     <!-- see: https://github.com/google/auto/tree/master/value -->
